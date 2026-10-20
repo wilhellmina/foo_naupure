@@ -105,9 +105,13 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="tweet.h" />
     <ClInclude Include="mainmenu.h" />
+    <ClInclude Include="version.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="foo_naupure.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="version.rc2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(FB2K_SDK)pfc\pfc.vcxproj">

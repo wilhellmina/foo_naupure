@@ -1,0 +1,30 @@
+// Version resource (the DLL's file properties), generated from version.h.
+// Kept out of foo_naupure.rc so the Visual Studio resource editor does not replace the macros with numbers.
+#include "version.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION NAUPURE_VERSION_MAJOR,NAUPURE_VERSION_MINOR,NAUPURE_VERSION_PATCH,0
+ PRODUCTVERSION NAUPURE_VERSION_MAJOR,NAUPURE_VERSION_MINOR,NAUPURE_VERSION_PATCH,0
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+ FILEFLAGS 0x0L
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_DLL
+ FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "foobar2000 component: post #NowPlaying to Twitter"
+            VALUE "FileVersion", NAUPURE_VERSION_STRING
+            VALUE "InternalName", "foo_naupure"
+            VALUE "OriginalFilename", "foo_naupure.dll"
+            VALUE "ProductName", "foo_naupure"
+            VALUE "ProductVersion", NAUPURE_VERSION_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

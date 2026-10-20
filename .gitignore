@@ -268,3 +268,6 @@ __pycache__/
 
 # foobar2000 SDK (extract SDK-*.7z here, see README)
 sdk/
+
+# release packages made by tools/package.ps1
+/dist/
