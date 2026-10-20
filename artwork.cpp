@@ -28,7 +28,7 @@ namespace
 
 	void log(const char* msg)
 	{
-		FB2K_console_formatter() << "foo_twitter: " << msg;
+		FB2K_console_formatter() << "foo_naupure: " << msg;
 	}
 
 	void check(HRESULT hr, const char* what)
@@ -194,7 +194,7 @@ namespace
 			return;
 		}
 		catch (std::exception const& e) {
-			FB2K_console_formatter() << "foo_twitter: could not prepare the album art, posting text only: " << e.what();
+			FB2K_console_formatter() << "foo_naupure: could not prepare the album art, posting text only: " << e.what();
 			return;
 		}
 
@@ -202,7 +202,7 @@ namespace
 		if (request != g_latest_request) return;
 		std::string error;
 		if (!art_server::start(std::move(art.data), art.mime, port, serve_timeout_ms, log, error)) {
-			FB2K_console_formatter() << "foo_twitter: could not start the art server on port " << port << ", posting text only: " << error.c_str();
+			FB2K_console_formatter() << "foo_naupure: could not start the art server on port " << port << ", posting text only: " << error.c_str();
 		}
 	}
 }

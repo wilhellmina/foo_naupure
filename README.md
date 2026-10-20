@@ -17,14 +17,14 @@ X の API は使わず、ブラウザの Tampermonkey で動くユーザース�
 1. ブラウザに [Tampermonkey](https://www.tampermonkey.net/) を入れる
 2. Chrome / Edge では拡張機能の管理画面で Tampermonkey の「詳細」を開き、**「ユーザー スクリプトを許可する」をオン**にする
    （古い Chrome では代わりに右上の「デベロッパー モード」をオン）。これがオフだとスクリプトは動きません
-3. [`userscript/foo_twitter_artwork.user.js`](https://github.com/wilhellmina/foo_naupure_twi/raw/master/userscript/foo_twitter_artwork.user.js) を開いてインストールする
+3. [`userscript/foo_naupure_artwork.user.js`](https://github.com/wilhellmina/foo_naupure_twi/raw/master/userscript/foo_naupure_artwork.user.js) を開いてインストールする
    （Tampermonkey のダッシュボードで新規スクリプトに中身を貼り付けてもよい）
 
 あとは今までどおり Playback → Tweet を実行すると、アート付きの投稿画面が開きます。内容を確認して投稿ボタンを押すだけです。
 
 ### 設定
 
-Preferences → Tools → **NowPlaying via Browser**
+Preferences → Tools → **foo_naupure**
 
 | 項目 | 既定値 | 説明 |
 | --- | --- | --- |
@@ -42,7 +42,7 @@ Preferences → Tools → **NowPlaying via Browser**
 
 ### うまくいかないとき
 
-View → Console に `foo_twitter:` で始まるメッセージが出ます。
+View → Console に `foo_naupure:` で始まるメッセージが出ます。
 
 - `no request for the artwork in time` … スクリプトが動いていない。Tampermonkey でスクリプトが有効か、「ユーザー スクリプトを許可する」、`PORT` を確認
 - `could not start the art server on port ...` … ほかのアプリがそのポートを使っている。設定でポートを変え、スクリプトの `PORT` も合わせる
@@ -53,8 +53,8 @@ View → Console に `foo_twitter:` で始まるメッセージが出ます。
 
 1. [foobar2000 SDK](https://www.foobar2000.org/SDK)（動作確認: `SDK-2026-09-17`）をリポジトリ直下の `sdk/` に展開する
    （`sdk/pfc`, `sdk/foobar2000/SDK` … となる配置）
-2. `foo_twitter.sln` を Visual Studio 2022 以降で開いてビルド（x64 / x86）
-3. `bin/<Platform>/Release/foo_twitter.dll` ができる
+2. `foo_naupure.sln` を Visual Studio 2022 以降で開いてビルド（x64 / x86）
+3. `bin/<Platform>/Release/foo_naupure.dll` ができる
 
 SDK 付属プロジェクトは v143 固定だが、v143 が無い環境（VS2026 など）では
 `Directory.Build.props` によりインストール済みの既定ツールセットで代用される。

@@ -118,7 +118,7 @@ namespace
 	class preferences_page_myimpl : public preferences_page_v3
 	{
 	public:
-		const char* get_name() override { return "NowPlaying via Browser"; }
+		const char* get_name() override { return "foo_naupure"; }
 		GUID get_guid() override { return guid_preferences_page; }
 		GUID get_parent_guid() override { return guid_tools; }
 		preferences_page_instance::ptr instantiate(fb2k::hwnd_t parent, preferences_page_callback::ptr callback) override

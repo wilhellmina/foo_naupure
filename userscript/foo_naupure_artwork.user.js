@@ -2,7 +2,7 @@
 // @name         foobar2000 nowplaying artwork
 // @namespace    https://github.com/wilhellmina/foo_naupure_twi
 // @version      1.0
-// @description  Attaches the album art served by foo_twitter (foobar2000) to the X post intent page.
+// @description  Attaches the album art served by foo_naupure (foobar2000) to the X post intent page.
 // @match        https://x.com/intent/*
 // @match        https://x.com/compose/*
 // @match        https://twitter.com/intent/*
@@ -14,7 +14,7 @@
 (() => {
   'use strict';
 
-  // Must match "Local server port" in foobar2000 > Preferences > Tools > NowPlaying via Browser.
+  // Must match "Local server port" in foobar2000 > Preferences > Tools > foo_naupure.
   const PORT = 18080;
 
   // X's DOM changes now and then; this is the place to fix when attaching stops working.
