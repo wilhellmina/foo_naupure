@@ -2,6 +2,7 @@
 #include "config.h"
 #include "resource.h"
 #include "tweet.h"
+#include <SDK/coreDarkMode.h>
 #include <algorithm>
 #include <string>
 
@@ -30,6 +31,7 @@ namespace
 	}
 
 	// Plain Win32 dialog; the SDK's preferences_page_impl<> helper needs WTL.
+	// Dark mode comes from foobar2000's own implementation (CCoreDarkModeHooks), which works without WTL.
 	// Also listens to playback so the preview follows the playing track.
 	class preferences_instance : public preferences_page_instance, private play_callback_impl_base
 	{
@@ -42,7 +44,8 @@ namespace
 
 		t_uint32 get_state() override
 		{
-			t_uint32 state = preferences_state::resettable;
+			// Without dark_mode_supported, foobar2000 turns the whole preferences window light while this page is shown.
+			t_uint32 state = preferences_state::resettable | preferences_state::dark_mode_supported;
 			if (has_changed()) state |= preferences_state::changed;
 			return state;
 		}
@@ -73,6 +76,7 @@ namespace
 				auto self = reinterpret_cast<preferences_instance*>(lp);
 				SetWindowLongPtr(wnd, DWLP_USER, lp);
 				self->m_wnd = wnd;
+				self->m_dark.AddDialogWithControls(wnd);
 				self->show(cfg_post_format.get().c_str(), cfg_attach_art, (unsigned)cfg_art_port.get(), (unsigned)cfg_art_max_edge.get());
 				return FALSE;
 			}
@@ -168,6 +172,8 @@ namespace
 		}
 
 		const preferences_page_callback::ptr m_callback;
+		// Follows foobar2000's dark mode setting.
+		fb2k::CCoreDarkModeHooks m_dark;
 		HWND m_wnd = nullptr;
 		bool m_showing = false;
 	};
