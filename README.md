@@ -17,7 +17,7 @@ X の API は使わず、ブラウザの Tampermonkey で動くユーザース�
 1. ブラウザに [Tampermonkey](https://www.tampermonkey.net/) を入れる
 2. Chrome / Edge では拡張機能の管理画面で Tampermonkey の「詳細」を開き、**「ユーザー スクリプトを許可する」をオン**にする
    （古い Chrome では代わりに右上の「デベロッパー モード」をオン）。これがオフだとスクリプトは動きません
-3. [`userscript/foo_naupure_artwork.user.js`](https://github.com/wilhellmina/foo_naupure_twi/raw/master/userscript/foo_naupure_artwork.user.js) を開いてインストールする
+3. [`userscript/foo_naupure_artwork.user.js`](https://github.com/wilhellmina/foo_naupure/raw/master/userscript/foo_naupure_artwork.user.js) を開いてインストールする
    （Tampermonkey のダッシュボードで新規スクリプトに中身を貼り付けてもよい）
 
 あとは今までどおり Playback → Tweet を実行すると、アート付きの投稿画面が開きます。内容を確認して投稿ボタンを押すだけです。

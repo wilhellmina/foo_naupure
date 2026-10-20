@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         foobar2000 nowplaying artwork
-// @namespace    https://github.com/wilhellmina/foo_naupure_twi
+// @namespace    https://github.com/wilhellmina/foo_naupure
 // @version      1.0
 // @description  Attaches the album art served by foo_naupure (foobar2000) to the X post intent page.
 // @match        https://x.com/intent/*
