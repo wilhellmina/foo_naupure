@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{85FBFD09-0099-4FE9-9DB6-78DB6F60F817}</ProjectGuid>
+    <ProjectGuid>{AB2E6AF8-8613-4481-8CF1-AC6FDDC539A6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <ProjectName>foo_naupure</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -106,7 +106,7 @@
     <ClInclude Include="ui.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="foo_sample.rc" />
+    <ResourceCompile Include="foo_naupure.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(FB2K_SDK)pfc\pfc.vcxproj">

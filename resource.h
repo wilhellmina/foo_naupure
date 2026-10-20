@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by foo_sample.rc
+// Used by foo_naupure.rc
 //
 #define IDD_PREFERENCES                 101
 #define IDC_ATTACH_ART                  1001

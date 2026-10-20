@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.37628.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "foo_naupure", "foo_sample.vcxproj", "{85FBFD09-0099-4FE9-9DB6-78DB6F60F817}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "foo_naupure", "foo_naupure.vcxproj", "{AB2E6AF8-8613-4481-8CF1-AC6FDDC539A6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "foobar2000_SDK", "sdk\foobar2000\SDK\foobar2000_SDK.vcxproj", "{E8091321-D79D-4575-86EF-064EA1A4A20D}"
 EndProject
@@ -19,14 +19,14 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{85FBFD09-0099-4FE9-9DB6-78DB6F60F817}.Debug|x64.ActiveCfg = Debug|x64
-		{85FBFD09-0099-4FE9-9DB6-78DB6F60F817}.Debug|x64.Build.0 = Debug|x64
-		{85FBFD09-0099-4FE9-9DB6-78DB6F60F817}.Debug|x86.ActiveCfg = Debug|Win32
-		{85FBFD09-0099-4FE9-9DB6-78DB6F60F817}.Debug|x86.Build.0 = Debug|Win32
-		{85FBFD09-0099-4FE9-9DB6-78DB6F60F817}.Release|x64.ActiveCfg = Release|x64
-		{85FBFD09-0099-4FE9-9DB6-78DB6F60F817}.Release|x64.Build.0 = Release|x64
-		{85FBFD09-0099-4FE9-9DB6-78DB6F60F817}.Release|x86.ActiveCfg = Release|Win32
-		{85FBFD09-0099-4FE9-9DB6-78DB6F60F817}.Release|x86.Build.0 = Release|Win32
+		{AB2E6AF8-8613-4481-8CF1-AC6FDDC539A6}.Debug|x64.ActiveCfg = Debug|x64
+		{AB2E6AF8-8613-4481-8CF1-AC6FDDC539A6}.Debug|x64.Build.0 = Debug|x64
+		{AB2E6AF8-8613-4481-8CF1-AC6FDDC539A6}.Debug|x86.ActiveCfg = Debug|Win32
+		{AB2E6AF8-8613-4481-8CF1-AC6FDDC539A6}.Debug|x86.Build.0 = Debug|Win32
+		{AB2E6AF8-8613-4481-8CF1-AC6FDDC539A6}.Release|x64.ActiveCfg = Release|x64
+		{AB2E6AF8-8613-4481-8CF1-AC6FDDC539A6}.Release|x64.Build.0 = Release|x64
+		{AB2E6AF8-8613-4481-8CF1-AC6FDDC539A6}.Release|x86.ActiveCfg = Release|Win32
+		{AB2E6AF8-8613-4481-8CF1-AC6FDDC539A6}.Release|x86.Build.0 = Release|Win32
 		{E8091321-D79D-4575-86EF-064EA1A4A20D}.Debug|x64.ActiveCfg = Debug|x64
 		{E8091321-D79D-4575-86EF-064EA1A4A20D}.Debug|x64.Build.0 = Debug|x64
 		{E8091321-D79D-4575-86EF-064EA1A4A20D}.Debug|x86.ActiveCfg = Debug|Win32
@@ -56,6 +56,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C30C2B27-E29B-4792-B392-ED729AF2CF49}
+		SolutionGuid = {47DACC17-DC3E-4521-979C-1377675B2748}
 	EndGlobalSection
 EndGlobal
