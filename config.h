@@ -1,7 +1,7 @@
 #pragma once
 #include "stdafx.h"
 
-// Settings edited on the preferences page (ui_preferences.cpp).
+// Settings edited on the preferences page (preferences.cpp).
 extern cfg_bool cfg_attach_art;
 extern cfg_uint cfg_art_port;
 extern cfg_uint cfg_art_max_edge;

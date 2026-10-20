@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include "ui.h"
-#include "post.h"
+#include "mainmenu.h"
+#include "tweet.h"
 #include "artwork.h"
 
 //impl tweet button

@@ -88,11 +88,11 @@
     <ClCompile Include="art_server.cpp">
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="init.cpp" />
-    <ClCompile Include="ui_preferences.cpp" />
+    <ClCompile Include="initquit.cpp" />
+    <ClCompile Include="preferences.cpp" />
     <ClCompile Include="version.cpp" />
-    <ClCompile Include="everything.cpp" />
-    <ClCompile Include="PCH.cpp">
+    <ClCompile Include="mainmenu.cpp" />
+    <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
@@ -102,8 +102,8 @@
     <ClInclude Include="config.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="post.h" />
-    <ClInclude Include="ui.h" />
+    <ClInclude Include="tweet.h" />
+    <ClInclude Include="mainmenu.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="foo_naupure.rc" />
