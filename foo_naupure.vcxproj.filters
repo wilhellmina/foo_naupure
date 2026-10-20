@@ -26,6 +26,9 @@
     <ClCompile Include="mainmenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tweet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="artwork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
