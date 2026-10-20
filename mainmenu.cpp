@@ -2,6 +2,7 @@
 #include "mainmenu.h"
 #include "tweet.h"
 #include "artwork.h"
+#include "config.h"
 
 //impl tweet button
 t_uint32 Tweet_Button_impl::get_command_count()
@@ -47,12 +48,11 @@ void Tweet_Button_impl::execute(t_uint32 p_index, service_ptr_t<service_base> p_
 {
 	//take track info only when button is clicked, not on new track, because it may be wrong info if user click button before new track is loaded
 	metadb_handle_ptr track_handle;
-	file_info_impl track_info;
+	std::string text;
 
-	if (playback_control::get()->get_now_playing(track_handle)) {
-		track_handle->get_info(track_info);
+	if (playback_control::get()->get_now_playing(track_handle) && Kokura_Asahi::format_post(cfg_post_format.get().c_str(), text)) {
 		//the intent page is opened once the album art (if enabled) is ready for the userscript to pick up
-		artwork::attach_then(track_handle, [track_info]() mutable { Kokura_Asahi::tweet(&track_info); });
+		artwork::attach_then(track_handle, [text]() { Kokura_Asahi::tweet(text); });
 	}
 	else
 	{

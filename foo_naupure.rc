@@ -50,18 +50,23 @@ END
 // Dialog
 //
 
-IDD_PREFERENCES DIALOGEX 0, 0, 332, 110
+IDD_PREFERENCES DIALOGEX 0, 0, 332, 196
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    CONTROL         "Attach album art to the post",IDC_ATTACH_ART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,318,10
-    LTEXT           "Needs the userscript in Tampermonkey (see README). Without it the post is text only, as before.",IDC_STATIC,19,19,306,8
-    RTEXT           "Local server port:",IDC_STATIC,7,40,110,8
-    EDITTEXT        IDC_ART_PORT,121,38,40,12,ES_AUTOHSCROLL | ES_NUMBER
-    LTEXT           "Must match PORT in the userscript.",IDC_STATIC,167,40,158,8
-    RTEXT           "Max image size:",IDC_STATIC,7,58,110,8
-    EDITTEXT        IDC_ART_MAX_EDGE,121,56,40,12,ES_AUTOHSCROLL | ES_NUMBER
-    LTEXT           "px on the long edge (200 - 4096)",IDC_STATIC,167,58,158,8
+    LTEXT           "Post text:",IDC_STATIC,7,7,318,8
+    EDITTEXT        IDC_POST_FORMAT,7,18,318,38,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "foobar2000 title formatting, one line per line of the post. e.g. %title% / %album%",IDC_STATIC,7,59,318,8
+    LTEXT           "Preview:",IDC_STATIC,7,73,36,8
+    LTEXT           "",IDC_POST_PREVIEW,45,73,280,26,SS_NOPREFIX
+    CONTROL         "Attach album art to the post",IDC_ATTACH_ART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,107,318,10
+    LTEXT           "Needs the userscript in Tampermonkey (see README). Without it the post is text only, as before.",IDC_STATIC,19,119,306,8
+    RTEXT           "Local server port:",IDC_STATIC,7,140,110,8
+    EDITTEXT        IDC_ART_PORT,121,138,40,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Must match PORT in the userscript.",IDC_STATIC,167,140,158,8
+    RTEXT           "Max image size:",IDC_STATIC,7,158,110,8
+    EDITTEXT        IDC_ART_MAX_EDGE,121,156,40,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "px on the long edge (200 - 4096)",IDC_STATIC,167,158,158,8
 END
 
 
@@ -78,7 +83,7 @@ BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 325
         TOPMARGIN, 7
-        BOTTOMMARGIN, 103
+        BOTTOMMARGIN, 189
     END
 END
 #endif    // APSTUDIO_INVOKED

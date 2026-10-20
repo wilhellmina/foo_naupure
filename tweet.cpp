@@ -3,6 +3,7 @@
 #include <sstream>
 #include <Windows.h>
 #include <iomanip>
+#include <algorithm>
 
 #include <stdio.h>
 #include <sys/stat.h>
@@ -46,25 +47,39 @@ namespace Kokura_Asahi
 	}	
 
 
-	void tweet(file_info_impl *track_info) {
-		std::string something_new;
-		
+	bool format_post(const char* format, std::string& out) {
+		auto playback = playback_control::get();
+		auto compiler = titleformat_compiler::get();
+		std::string text;
 
-		const char* track_artist = track_info->meta_get("artist", 0);
-		if (track_artist == nullptr) {
-			track_artist = "";
+		//each line of the format is compiled on its own, so the format can be written the way the post should look
+		std::istringstream lines(format);
+		std::string line;
+		for (bool first = true; std::getline(lines, line); first = false) {
+			if (!line.empty() && line.back() == '\r') {
+				line.pop_back();
+			}
+			titleformat_object::ptr script;
+			compiler->compile_safe_ex(script, line.c_str());
+			pfc::string8 formatted;
+			if (!playback->playback_format_title(nullptr, formatted, script, nullptr, playback_control::display_level_all)) {
+				return false;
+			}
+			if (!first) {
+				text += '\n';
+			}
+			text += formatted.c_str();
 		}
-		const char* track_title = track_info->meta_get("title", 0);
-		if (track_title == nullptr) {
-			track_title = "";
-		}
-		const char* track_album = track_info->meta_get("album", 0);
-		if (track_album == nullptr) {
-			track_album = "";
-		}
-		
-		std::string data = std::string(track_title) + ("(") + std::string(track_artist) + (")") + (" / ") + std::string(track_album);
-		std::string data_encoded = "https://twitter.com/intent/tweet?text=%23NowPlaying%0A" + percentEnc(data);
+
+		//$crlf() gives CRLF; the post uses LF only
+		text.erase(std::remove(text.begin(), text.end(), '\r'), text.end());
+		out = std::move(text);
+		return true;
+	}
+
+
+	void tweet(const std::string& text) {
+		std::string data_encoded = "https://twitter.com/intent/tweet?text=" + percentEnc(text);
 
 
 

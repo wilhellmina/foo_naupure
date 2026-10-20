@@ -6,6 +6,31 @@ PlaybackのPullDownにあるはず
 
 https://wakiga.nl/2021/04/24/foobar2000%e3%81%aenowplaying%e3%82%92%e3%83%84%e3%82%a4%e3%83%83%e3%82%bf%e3%83%bc%e3%81%ab%e6%8a%95%e7%a8%bf%e3%81%97%e3%81%9f%e3%81%84/
 
+## 投稿する文字列を変える
+
+Preferences → Tools → **foo_naupure** の「Post text」に、投稿の文面を foobar2000 のタイトルフォーマットで書けます。
+1 行がそのまま投稿の 1 行になります。下の Preview に、再生中の曲で実際にどうなるかが出ます。
+
+既定値（これまでとほぼ同じ文面）:
+
+```
+#NowPlaying
+%title%['('%artist%')'][ / %album%]
+```
+
+例:
+
+| Post text | 投稿される文字列 |
+| --- | --- |
+| `%title% / %album%` | 曲名 / アルバム名 |
+| `%artist% - %title%` | アーティスト名 - 曲名 |
+| `#NowPlaying %title%`（1 行目）<br>`[%album artist% / ]%album%`（2 行目） | #NowPlaying 曲名<br>アルバムアーティスト名 / アルバム名 |
+
+- `%title%` `%artist%` `%album%` `%album artist%` `%date%` `%tracknumber%` など、`%タグ名%` がそのタグの値になる
+- タグがない曲では `?` になる。なくてもよい部分は `[ ]` で囲むと、タグがないときにまとめて消える
+- `(` `)` `[` `]` `%` `$` `'` はタイトルフォーマットの記号なので、文字として出したいときは `'('` のように `'` で囲む
+- 「Reset page」で既定値に戻る
+
 ## アルバムアートを添付する（任意）
 
 再生中の曲のアルバムアート（front cover）を、投稿画面に自動で添付できます。
@@ -28,6 +53,7 @@ Preferences → Tools → **foo_naupure**
 
 | 項目 | 既定値 | 説明 |
 | --- | --- | --- |
+| Post text | （上記） | 投稿の文面。[投稿する文字列を変える](#投稿する文字列を変える) を参照 |
 | Attach album art to the post | オン | アートを添付するかどうか |
 | Local server port | 18080 | 画像を受け渡すポート。**変えたらスクリプト冒頭の `PORT` も同じ値にする** |
 | Max image size | 1600 | 長辺の上限（px）。これより大きいアートは縮小して JPEG にする（透過ありは PNG） |
