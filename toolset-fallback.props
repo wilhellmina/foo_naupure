@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup Condition="'$(PlatformToolset)' != '' and !Exists('$(VCTargetsPath)Platforms\$(Platform)\PlatformToolsets\$(PlatformToolset)')">
+    <PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>
+  </PropertyGroup>
+</Project>

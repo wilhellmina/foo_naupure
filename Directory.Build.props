@@ -1,0 +1,7 @@
+<Project>
+  <!-- The foobar2000 SDK projects under sdk/ are pinned to v143 (VS2022).
+       toolset-fallback.props swaps in the installed default toolset when v143 is missing (e.g. VS2026). -->
+  <PropertyGroup>
+    <ForceImportBeforeCppProps>$(MSBuildThisFileDirectory)toolset-fallback.props</ForceImportBeforeCppProps>
+  </PropertyGroup>
+</Project>
