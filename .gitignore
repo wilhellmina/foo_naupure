@@ -266,7 +266,7 @@ paket-files/
 __pycache__/
 *.pyc
 
-# foobar2000 SDK (extract SDK-*.7z here, see README)
+# foobar2000 SDK (extract SDK-*.7z here, see BUILDING.md)
 sdk/
 
 # release packages made by tools/package.ps1
